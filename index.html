@@ -1,25 +1,46 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no">
-        <title>Sudoku</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="./index.css"/>
+    <script src="./index.js" defer></script>
+</head>
+<body id="body">
 
-        <link rel="stylesheet" href="sudoku.css">
-        <script src="sudoku.js"></script>
-    </head>
+    <div class="main" id="main">
+        <h1 class="heading" id="heading">Sudoku Solver</h1>
+        <div class="active">
 
-    <body>
-        <h1>Sudoku</h1>
-        <hr>
-        <h2 id="errors">0</h2>
+            <div class="mainButtons">
+                <div class="solver" id="solver"><h1>Solve !</h1></div>
+                <div class="speedup" id="speedup"><h1>Speed Solve !</h1></div>
+                <div class="newBoard" id="newBoard"><h1>New Board !</h1></div>
+            </div>
+                
+            <div id="board" class="board"></div>
 
-        <!-- 9x9 board -->
-        <div id="board"></div>
-        <br>
-        <div id="digits">
+            <div id="numbers" class="numbers">
+                <p class="nums" id="one">1</p>
+                <p class="nums" id="two">2</p>
+                <p class="nums" id="three">3</p>
+                <p class="nums" id="four">4</p>
+                <p class="nums" id="five">5</p>
+                <p class="nums" id="six">6</p>
+                <p class="nums" id="seven">7</p>
+                <p class="nums" id="eight">8</p>
+                <p class="nums" id="nine">9</p>
+                <p class="nums" id="del">del</p>
+            </div>
+            <div class="allWarnings">
+                <p class="warning1" id="warning1">Number is being<br> repeated in the same row</p>
+                <p class="warning2" id="warning2">Number is being<br> repeated in the same column</p>
+                <p class="warning3" id="warning3">Number is being<br> repeated in the same compartment</p>
+            </div>
         </div>
-
-    </body>
-
-
+    </div>
+    
+</body>
 </html>
