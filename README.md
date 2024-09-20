@@ -11,13 +11,6 @@ HTML: For structuring the webpage.
 CSS: For styling and making the interface visually appealing.
 JavaScript: For implementing the logic of the Sudoku solver.
 
-
-
-
-
-
-
-
-
+Screenshot of the game
 ![image](https://github.com/user-attachments/assets/b9fbd4f7-18ae-40a9-9a8f-a5744cc1211f)
 
