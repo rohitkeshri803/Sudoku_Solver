@@ -11,8 +11,9 @@ Error detection for invalid inputs or puzzles.
 - CSS: For styling and making the interface visually appealing.
 - JavaScript: For implementing the logic of the Sudoku solver.
 
-## Screenshot of the game
+## Input a valid sudoku puzzle
 ![image](https://github.com/user-attachments/assets/c644c18e-024c-4d44-b78e-a2ad2f2ce564)
+## solve the puzzle
 ![image](https://github.com/user-attachments/assets/a67bce13-568a-44a7-807b-d26852d0ee0d)
 
 
