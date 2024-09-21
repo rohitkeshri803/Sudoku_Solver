@@ -4,43 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="files/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="files/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="files/favicon_io/favicon-16x16.png">
     <title>Sudoku Solver</title>
-    <link rel="stylesheet" href="./index.css"/>
-    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body id="body">
+<body>
+    <div class="sudoku-solver">
+        <h1 class="intro">Sudoku Solver</h1>
+        <p class="description">Solves sudoku puzzle using <span class="decorator-elem">backtracking</span> technique.</p>
+        <p class="instruction-1">&#8594 Enter a valid sudoku puzzle. Then click the <span class="decorator-elem">Solve</span> button to see the solution.</p>
+        <p class="instruction-2">&#8594 Click the <span class="decorator-elem">Clear</span> button to clear the board.</p>
+        <p class="instruction-3">&#8594 Hit <spanc class="decorator-elem">Load a puzzle</spanc> to load a pre-existing puzzle.</p>
+        <div id="puzzle" class="puzzle"></div>
+        <button type="button" id="solve-button" class="solve-button">Solve</button>
+        <button type="button" id="clear-button" class="clear-button">Clear</button>
+        <button type="button" id="load-button" class="load-button">Load a puzzle</button>
+    </div>    
 
-    <div class="main" id="main">
-        <h1 class="heading" id="heading">Sudoku Solver</h1>
-        <div class="active">
-
-            <div class="mainButtons">
-                <div class="solver" id="solver"><h1>Solve !</h1></div>
-                <div class="speedup" id="speedup"><h1>Speed Solve !</h1></div>
-                <div class="newBoard" id="newBoard"><h1>New Board !</h1></div>
-            </div>
-                
-            <div id="board" class="board"></div>
-
-            <div id="numbers" class="numbers">
-                <p class="nums" id="one">1</p>
-                <p class="nums" id="two">2</p>
-                <p class="nums" id="three">3</p>
-                <p class="nums" id="four">4</p>
-                <p class="nums" id="five">5</p>
-                <p class="nums" id="six">6</p>
-                <p class="nums" id="seven">7</p>
-                <p class="nums" id="eight">8</p>
-                <p class="nums" id="nine">9</p>
-                <p class="nums" id="del">del</p>
-            </div>
-            <div class="allWarnings">
-                <p class="warning1" id="warning1">Number is being<br> repeated in the same row</p>
-                <p class="warning2" id="warning2">Number is being<br> repeated in the same column</p>
-                <p class="warning3" id="warning3">Number is being<br> repeated in the same compartment</p>
-            </div>
-        </div>
-    </div>
-    
+    <script type="module" defer src="scripts/app.js"></script>
 </body>
 </html>
