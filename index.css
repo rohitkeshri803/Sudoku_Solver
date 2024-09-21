@@ -1,192 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    border-spacing: 0;
 }
 
-body {
-    background-image: url('numbers.jpg');
-    background-size: cover;
-    background-repeat: repeat;
-    width: 100%;
-    height: 100%;
-    color: rgba(255, 255, 255, 0.724);
-    padding-top: 4vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow-x: hidden;
-    margin-left: 4.5vw;
+html {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FDF2E9;
 }
 
-.heading {
-    font-size: 4vw;
-    margin-right: 9vw;
-    cursor: context-menu;
+.intro {
+    color: #1B4F72;
+    font-size: 35px;
+    letter-spacing: 1px;
+    margin: 30px 0px 10px 0px;
 }
 
-.allWarnings{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 2vw;
-    margin-top: 3vw;
-    margin-right: 5vw;
-    font-size: 2.3vw;
-    flex: 0.7;
-    word-wrap: break-word;
-    cursor: context-menu;
+.instruction-1, .instruction-2, .instruction-3, .description {
+    font-size: 18px;
+    color: #1B4F72;
+    letter-spacing: 0.5px;
 }
 
+.instruction-3 {
+    margin: 0px 0px 15px 0px;
+}
 
-.warning1, .warning2, .warning3 {
-    color: red;
+.description {
+    margin: 0px 0px 15px 0px;
+}
+
+.decorator-elem {
     font-weight: bold;
-    flex: 1;
-    opacity: 0;
 }
 
-.warn1anim, .warn2anim, .warn3anim {
-    animation: animate 3s forwards;
+.sudoku-solver {
+    margin: auto;
+    width: 50%;
 }
 
-@keyframes animate {
-    0% {opacity:0;}
-    50% {opacity:1;}
-    100% {opacity:0;}
-}
-
-.active {
-    display: flex;
-    justify-content: center;
-
+.puzzle {
+    width: 540px;
+    height: 540px;
 }
 
 
-.numbers > p {
-    padding-top: 0.5vh;
-    flex: 1;
-    border: 2px solid rgba(255, 255, 255, 0.724);
-    width: 2.7vw;
-    height: 2.7vw;
-    font-size: 2vw;
-    border-radius: 20%;
-    margin: 10px 0px 5px 50px;
+.odd-section {
+    background: #d3d3d3;
+}
+
+.puzzle input {
     text-align: center;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    border: 1px #808080 solid;
 }
 
-.nums:hover {
-    background-color: lightcoral;
-    cursor: pointer;
+.empty-el {
+    color: #4848d4;
 }
 
-
-.board {
-    padding-top: 2.5vw;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    width: 35vw;
-    height: 35vw;
-}
-
-.square {
-    padding-top: 1vh;
-    width: 3.4vw;
-    height: 3.4vw;
-    font-size: 2vw;
-    margin: 0;
-    border: 1.3px solid rgba(255, 255, 255, 0.724);
+.solve-button, .clear-button, .load-button {
+    margin-top: 20px;
+    background-color: #1B4F72;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 15px 30px;
     text-align: center;
-    color: black;
-    
-}
-
-.square:hover {
-    background-color: lightskyblue;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    letter-spacing: 1px;
+    /* text-transform: uppercase; */
     cursor: pointer;
 }
 
-.solveColour {
-    background-color: lightgreen;
+.clear-button, .load-button {
+    margin-left: 15px;
 }
 
-.borderBottom {
-    border-bottom: 4px solid rgba(255, 255, 255, 0.724);
-}
-
-.borderRight {
-    border-right: 4px solid rgba(255, 255, 255, 0.724);
-}
-
-.borderLeft {
-    border-left: 4px solid rgba(255, 255, 255, 0.724);
-}
-
-.borderUp {
-    border-top: 4px solid rgba(255, 255, 255, 0.724);
-}
-
-.selected {
-    background-color: lightsalmon;
-}
-
-.mainButtons {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 5vh;
-    flex: 0.9;
-}
-
-.solver, .speedup, .newBoard {
-    font-size: 1.5vw;
-    padding: 5px;
-    margin-bottom: 5vw;
-    margin-right: 5vw;
-    transition: 1s;
-    position: relative;
-    overflow: hidden;
-}
-
-.solver:before, .newBoard:before, .speedup:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 10px;
-    height: 10px;
-    border-top: 2px solid lightcyan;
-    border-left: 2px solid lightcyan;
-    transition: 0.5s;
-}
-
-.solver:after, .newBoard:after,.speedup:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 10px;
-    height: 10px;
-    border-bottom: 2px solid lightcyan;
-    border-right: 2px solid lightcyan;
-    transition: 0.5s;
-}
-
-.solver:hover:before, .newBoard:hover:before, .speedup:hover:before {
-    width: 100%;
-    height: 100%;
-}
-
-.solver:hover:after, .newBoard:hover:after, .speedup:hover:after {
-    width: 100%;
-    height: 100%;
-}
-
-.solver:hover, .newBoard:hover, .speedup:hover {
-    background-color: lightcyan;
-    color: black;
-    box-shadow: 0 0 50px lightcyan;
-    cursor: pointer;
+.solve-button:hover, .clear-button:hover, .load-button:hover {
+    background-color: #568caf;
 }
