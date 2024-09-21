@@ -12,7 +12,10 @@ Error detection for invalid inputs or puzzles.
 - JavaScript: For implementing the logic of the Sudoku solver.
 
 ## Screenshot of the game
-![image](https://github.com/user-attachments/assets/b9fbd4f7-18ae-40a9-9a8f-a5744cc1211f)
+![image](https://github.com/user-attachments/assets/c644c18e-024c-4d44-b78e-a2ad2f2ce564)
+![image](https://github.com/user-attachments/assets/a67bce13-568a-44a7-807b-d26852d0ee0d)
+
+
 
 ## Contributors:
 Rohit Keshri
